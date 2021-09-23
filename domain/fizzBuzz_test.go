@@ -20,12 +20,16 @@ func TestParameterizedTest(t *testing.T) {
         expected string
 	}{
 		{1, "1"},
+        {2, "2"},
+        {3, "Fizz"},
+        {5, "Buzz"},
+        {15, "FizzBuzz"},
 	}
 
 	for i := range parameters {
 		actual := fizzbuzz(parameters[i].input)
 		if actual != parameters[i].expected {
-			t.Logf("expected%s: , actual:%s", parameters[i].expected, actual)
+			t.Logf("expected:%s , actual:%s", parameters[i].expected, actual)
 			t.Fail()
 		}
 	}
