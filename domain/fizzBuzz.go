@@ -1,5 +1,9 @@
 package main
 
-func Execute(a int) string {
-    return a
+import(
+    "strconv"
+)
+
+func fizzbuzz(value int) string {
+    return strconv.Itoa(value)
 }
